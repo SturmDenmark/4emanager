@@ -1,10 +1,20 @@
 ﻿namespace Game.Data
 {
-    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class AbilityScore
     {
-        public int Score { get; set; }
+        public AbilityScore()
+        {
+            this.AbilityAdds = new List<int>();
+        }
+
+        public ICollection<int> AbilityAdds { get; private set; }
+
+        public int Base { get; set; }
+
+        public int Score { get { return this.AbilityAdds.Sum(); } }
 
         public Ability Ability { get; set; }
 

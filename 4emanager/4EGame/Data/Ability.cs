@@ -23,7 +23,7 @@
         /// <summary>
         /// The intellect ability.
         /// </summary>
-        Intellect,
+        Intelligence,
 
         /// <summary>
         /// The wisdom ability.
