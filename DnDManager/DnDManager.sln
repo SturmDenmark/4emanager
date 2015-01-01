@@ -3,13 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4EGame", "4EGame\4EGame.csproj", "{82F8EDC6-EC89-4BCF-BF2C-3D588543E0B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDGame", "DnDGame\DnDGame.csproj", "{82F8EDC6-EC89-4BCF-BF2C-3D588543E0B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4EGame.DnDInsider", "4EGame.DnDInsider\4EGame.DnDInsider.csproj", "{2AF1D051-06C7-400B-AB23-914BA0B246B4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{52393D56-EDB4-4CC3-8055-10B9CD82CE41}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4EGame.DnDInsiderTest", "4EGame.DnDInsiderTest\4EGame.DnDInsiderTest.csproj", "{452B7FB5-C576-411C-B17B-6175B2C19CAC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rulesets", "Rulesets", "{D6F0C2C6-39C3-42AF-918B-1161DBCE1098}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesetE35", "Rulesets\RulesetE35\RulesetE35.csproj", "{68CAA242-38AA-4707-BF18-8AFB990BA770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesetE35Test", "UnitTest\RulesetE35Test\RulesetE35Test.csproj", "{C7359F45-B49D-459A-A23F-D3522D5F740C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RulesetE4", "Rulesets\RulesetE4\RulesetE4.csproj", "{F45835EC-28F3-4D7A-A8EB-6CA02C3D1559}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,11 +37,26 @@ Global
 		{452B7FB5-C576-411C-B17B-6175B2C19CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{452B7FB5-C576-411C-B17B-6175B2C19CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{452B7FB5-C576-411C-B17B-6175B2C19CAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CAA242-38AA-4707-BF18-8AFB990BA770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CAA242-38AA-4707-BF18-8AFB990BA770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CAA242-38AA-4707-BF18-8AFB990BA770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CAA242-38AA-4707-BF18-8AFB990BA770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7359F45-B49D-459A-A23F-D3522D5F740C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7359F45-B49D-459A-A23F-D3522D5F740C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7359F45-B49D-459A-A23F-D3522D5F740C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7359F45-B49D-459A-A23F-D3522D5F740C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45835EC-28F3-4D7A-A8EB-6CA02C3D1559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45835EC-28F3-4D7A-A8EB-6CA02C3D1559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45835EC-28F3-4D7A-A8EB-6CA02C3D1559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45835EC-28F3-4D7A-A8EB-6CA02C3D1559}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{452B7FB5-C576-411C-B17B-6175B2C19CAC} = {52393D56-EDB4-4CC3-8055-10B9CD82CE41}
+		{68CAA242-38AA-4707-BF18-8AFB990BA770} = {D6F0C2C6-39C3-42AF-918B-1161DBCE1098}
+		{C7359F45-B49D-459A-A23F-D3522D5F740C} = {52393D56-EDB4-4CC3-8055-10B9CD82CE41}
+		{F45835EC-28F3-4D7A-A8EB-6CA02C3D1559} = {D6F0C2C6-39C3-42AF-918B-1161DBCE1098}
 	EndGlobalSection
 EndGlobal

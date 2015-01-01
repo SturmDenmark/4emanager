@@ -7,8 +7,8 @@
     <ProjectGuid>{05FCC4A3-EE8F-4369-8DA8-466BE7FA0F02}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Game.Common</RootNamespace>
-    <AssemblyName>4EGame.Common</AssemblyName>
+    <RootNamespace>DnDGame.Common</RootNamespace>
+    <AssemblyName>DnDGame.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

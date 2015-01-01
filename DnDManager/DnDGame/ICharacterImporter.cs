@@ -1,6 +1,6 @@
-﻿namespace Game
+﻿namespace DnDGame
 {
-    using Game.Data;
+    using DnDGame.Data;
 
     public interface ICharacterImporter
     {

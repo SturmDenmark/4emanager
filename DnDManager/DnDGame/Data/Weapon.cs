@@ -1,4 +1,4 @@
-﻿namespace Game.Data
+﻿namespace DnDGame.Data
 {
     public class Weapon
     {
@@ -23,5 +23,13 @@
         public int CritDamage { get; set; }
 
         public int CritRange { get; set; }
+
+        public DamageType DamageType { get; set; }
+
+        public WeaponGroup WeaponGroup { get; set; }
+
+        public WeaponHanded WeaponHanded { get; set; }
+
+        public WeaponProperty WeaponProperty { get; set; }
     }
 }

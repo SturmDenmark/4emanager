@@ -6,7 +6,10 @@
     using System.Linq;
     using System.Xml.Linq;
 
-    using Game.Data;
+    using DnDGame;
+    using DnDGame.Data;
+
+    using RulesetE4;
 
     public class Importer : ICharacterImporter
     {
@@ -101,12 +104,12 @@
 
         private static void ParseAbilities(Character character, dynamic xmlContent)
         {
-            character.Strength = new AbilityScore { Ability = Ability.Strength, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Strength.score) };
-            character.Constitution = new AbilityScore { Ability = Ability.Constitution, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Constitution.score) };
-            character.Dexteriry = new AbilityScore { Ability = Ability.Dexterity, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Dexterity.score) };
-            character.Intelligence = new AbilityScore { Ability = Ability.Intelligence, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Intelligence.score) };
-            character.Wisdom = new AbilityScore { Ability = Ability.Wisdom, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Wisdom.score) };
-            character.Charisma = new AbilityScore { Ability = Ability.Charisma, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Charisma.score) };
+            character.Strength = new AbilityScoreE4 { Ability = Ability.Strength, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Strength.score) };
+            character.Constitution = new AbilityScoreE4 { Ability = Ability.Constitution, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Constitution.score) };
+            character.Dexteriry = new AbilityScoreE4 { Ability = Ability.Dexterity, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Dexterity.score) };
+            character.Intelligence = new AbilityScoreE4 { Ability = Ability.Intelligence, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Intelligence.score) };
+            character.Wisdom = new AbilityScoreE4 { Ability = Ability.Wisdom, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Wisdom.score) };
+            character.Charisma = new AbilityScoreE4 { Ability = Ability.Charisma, Base = int.Parse(xmlContent.D20Character.CharacterSheet[0].AbilityScores.Charisma.score) };
 
             var stats = xmlContent.D20Character.CharacterSheet[0].StatBlock.Stat;
             foreach (var stat in stats)
@@ -125,22 +128,22 @@
                 switch (ability)
                 {
                     case Ability.Strength:
-                        character.Strength.AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
+                        ((AbilityScoreE4)character.Strength).AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
                         break;
                     case Ability.Constitution:
-                        character.Strength.AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
+                        ((AbilityScoreE4)character.Constitution).AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
                         break;
                     case Ability.Dexterity:
-                        character.Strength.AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
+                        ((AbilityScoreE4)character.Dexteriry).AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
                         break;
                     case Ability.Intelligence:
-                        character.Strength.AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
+                        ((AbilityScoreE4)character.Intelligence).AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
                         break;
                     case Ability.Wisdom:
-                        character.Strength.AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
+                        ((AbilityScoreE4)character.Wisdom).AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
                         break;
                     case Ability.Charisma:
-                        character.Strength.AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
+                        ((AbilityScoreE4)character.Charisma).AbilityAdds.Add(adds.Sum(i => int.Parse(i.Value)));
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();

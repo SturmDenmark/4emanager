@@ -1,4 +1,4 @@
-﻿namespace Game.Data
+﻿namespace DnDGame.Data
 {
     /// <summary>
     /// Available game abilities.
